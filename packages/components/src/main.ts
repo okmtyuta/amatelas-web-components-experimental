@@ -1,7 +1,7 @@
-import "./style.css";
+import { init } from "./init";
+
+init();
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
-  <div>
-vanila
-  </div>
+<amatelas-list list="football|baseball|basketball|golf|tennis"/>
 `;

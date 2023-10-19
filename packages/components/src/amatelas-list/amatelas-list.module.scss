@@ -1,0 +1,12 @@
+.list {
+  text-align: -webkit-match-parent;
+  display: flex;
+  flex-direction: column;
+}
+.list-item {
+  text-align: -webkit-match-parent;
+  line-height: 1.7;
+}
+.list-item::marker {
+  color: #999;
+}
