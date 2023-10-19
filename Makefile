@@ -7,7 +7,7 @@ format:
 	pnpm format
 
 test:
-	pnpm test:amatelas
+	pnpm test
 
 build:
 	pnpm build
