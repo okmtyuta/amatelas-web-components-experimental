@@ -2,8 +2,10 @@
 
 [Amatelas UI](https://github.com/okmtyuta/amatelas)を実験的にweb-componentsで実装してみている。
 
-# 使い方
+# Usage
 
-1. pnpm i
-2. pnpm build:components
-3. pnpm dev:sample
+Add script to your html:
+
+```html
+https://cdn.jsdelivr.net/npm/@okmtyuta/amatelas-web-components-experimental@0.0.2
+```

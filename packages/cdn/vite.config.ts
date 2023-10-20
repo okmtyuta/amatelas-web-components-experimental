@@ -5,10 +5,9 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     lib: {
-      entry: {
-        index: resolve(__dirname, 'src/index.ts'),
-        amatelasList: resolve(__dirname, 'src/amatelas-list/amatelas-list.ts')
-      }
+      entry: resolve(__dirname, 'src/index.ts'),
+      name: 'index',
+      fileName: 'index'
     },
     rollupOptions: {}
   }

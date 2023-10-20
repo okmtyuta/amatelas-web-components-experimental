@@ -1,0 +1,32 @@
+{
+  "name": "@okmtyuta/amatelas-web-components-experimental",
+  "private": false,
+  "version": "0.0.3",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/types/src/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/types/src/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && tsc && tsc-alias",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.7",
+    "sass": "^1.69.4",
+    "tsc-alias": "^1.8.8",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

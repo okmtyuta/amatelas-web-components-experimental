@@ -1,7 +1,7 @@
 {
-  "name": "@okmtyuta/amatelas-web-components-experimental",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@okmtyuta/amatelas-web-components-experimental-cdn",
+  "private": false,
+  "version": "0.0.3",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/types/src/index.d.ts",
@@ -11,6 +11,9 @@
       "types": "./dist/types/src/index.d.ts"
     }
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build && tsc && tsc-alias",
@@ -22,5 +25,11 @@
     "tsc-alias": "^1.8.8",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "@okmtyuta/amatelas-web-components-experimental": "workspace:^"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
