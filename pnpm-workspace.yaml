@@ -1,4 +1,4 @@
 packages:
-  - "packages/*"
-  - "app/*"
-  - "storybook"
+  - 'packages/*'
+  - 'app/*'
+  - 'storybook'

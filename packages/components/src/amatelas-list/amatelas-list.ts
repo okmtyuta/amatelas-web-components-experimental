@@ -1,26 +1,57 @@
-import styles from "./amatelas-list.module.scss";
-
 export class AmatelasList extends HTMLElement {
-  list: string[] | undefined;
+  shadow: ShadowRoot
+  constructor() {
+    super()
+
+    this.shadow = this.attachShadow({ mode: 'open' })
+  }
 
   connectedCallback() {
-    this.list = this.getAttribute("list")?.split("|") || [];
-    this.render();
+    this.render()
   }
 
   render() {
-    if (this.list) {
-      const li = `${this.list
-        .map((item) => {
-          return `<li class=${styles["list-item"]}>${item}</li>`;
-        })
-        .join("")}`;
+    this.shadow.innerHTML = `
+    <style>
+      .amatelas-list {
+        text-align: -webkit-match-parent;
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+    <ul class="amatelas-list">
+      <slot></slot>
+    </ul>
+  `
+  }
+}
 
-      this.innerHTML = `
-        <ul class=${styles["list"]}>
-        ${li}
-        </ul>
-      `;
+export class AmatelasListItem extends HTMLElement {
+  shadow: ShadowRoot
+  constructor() {
+    super()
+
+    this.shadow = this.attachShadow({ mode: 'open' })
+  }
+
+  connectedCallback() {
+    this.render()
+  }
+
+  render() {
+    this.shadow.innerHTML = `
+    <style>
+    .amatelas-list-item {
+      text-align: -webkit-match-parent;
+      line-height: 1.7;
     }
+    .amatelas-list-item::marker {
+      color: #999;
+    }
+    </style>
+      <li class="amatelas-list-item">
+        <slot></slot>
+      </li>
+      `
   }
 }

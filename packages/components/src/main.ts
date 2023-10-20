@@ -1,7 +1,15 @@
-import { init } from "./init";
+import { init } from './init'
 
-init();
+import './reset.css'
 
-document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
-<amatelas-list list="football|baseball|basketball|golf|tennis"/>
-`;
+init()
+
+document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
+<div>
+  <amatelas-list >
+    <amatelas-list-item>list 1</<amatelas-list-item>
+    <amatelas-list-item>list 2</<amatelas-list-item>
+    <amatelas-list-item>list 3</<amatelas-list-item>
+  </amatelas-list>
+</div>
+`

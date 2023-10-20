@@ -1,15 +1,15 @@
-import { defineConfig } from "vite";
-import { resolve } from "path";
+import { defineConfig } from 'vite'
+import { resolve } from 'path'
 
 export default defineConfig({
   build: {
-    outDir: "dist",
+    outDir: 'dist',
     lib: {
       entry: {
-        index: resolve(__dirname, "src/index.ts"),
-        amatelasList: resolve(__dirname, "src/amatelas-list.ts"),
-      },
+        index: resolve(__dirname, 'src/index.ts'),
+        amatelasList: resolve(__dirname, 'src/amatelas-list/amatelas-list.ts')
+      }
     },
-    rollupOptions: {},
-  },
-});
+    rollupOptions: {}
+  }
+})
