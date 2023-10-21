@@ -11,18 +11,18 @@ export class AmatelasList extends HTMLElement {
   }
 
   render() {
-    this.shadow.innerHTML = `
-    <style>
-      .amatelas-list {
-        text-align: -webkit-match-parent;
-        display: flex;
-        flex-direction: column;
-      }
-    </style>
-    <ul class="amatelas-list">
-      <slot></slot>
-    </ul>
-  `
+    this.shadow.innerHTML = /* HTML */ `
+      <style>
+        .amatelas-list {
+          text-align: -webkit-match-parent;
+          display: flex;
+          flex-direction: column;
+        }
+      </style>
+      <ul class="amatelas-list">
+        <slot></slot>
+      </ul>
+    `
   }
 }
 
@@ -39,19 +39,19 @@ export class AmatelasListItem extends HTMLElement {
   }
 
   render() {
-    this.shadow.innerHTML = `
-    <style>
-    .amatelas-list-item {
-      text-align: -webkit-match-parent;
-      line-height: 1.7;
-    }
-    .amatelas-list-item::marker {
-      color: #999;
-    }
-    </style>
+    this.shadow.innerHTML = /* HTML */ `
+      <style>
+        .amatelas-list-item {
+          text-align: -webkit-match-parent;
+          line-height: 1.7;
+        }
+        .amatelas-list-item::marker {
+          color: #999;
+        }
+      </style>
       <li class="amatelas-list-item">
         <slot></slot>
       </li>
-      `
+    `
   }
 }
